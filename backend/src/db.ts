@@ -126,16 +126,27 @@ export function seedIfEmpty() {
   });
 
   const materials: [string, string, string, number, string, number, string][] = [
+    // metals
     ["m_cu", "Copper", "Cu", 900, "+4%", 1, "metal"],
+    ["m_bz", "Bronze", "Bz", 720, "+3%", 1, "metal"],
     ["m_br", "Brass", "Br", 640, "+1%", 1, "metal"],
+    ["m_pb", "Lead", "Pb", 210, "0%", 1, "metal"],
+    ["m_zn", "Zinc", "Zn", 175, "+1%", 1, "metal"],
     ["m_al", "Aluminium", "Al", 165, "+2%", 1, "metal"],
+    ["m_ss", "Stainless steel", "SS", 130, "+2%", 1, "metal"],
+    ["m_fe", "Iron & steel", "Fe", 48, "+1%", 1, "metal"],
+    // other scrap
     ["m_bt", "Batteries", "Bt", 120, "−2%", 0, "other"],
     ["m_ew", "E-waste", "E", 60, "0%", 1, "other"],
     ["m_ap", "Appliances", "Ap", 55, "+3%", 1, "other"],
-    ["m_fe", "Iron & steel", "Fe", 48, "+1%", 1, "metal"],
     ["m_ty", "Tyres", "Ty", 40, "0%", 1, "other"],
+    ["m_rb", "Rubber", "Rb", 25, "0%", 1, "other"],
+    ["m_wd", "Wood", "Wd", 10, "−1%", 0, "other"],
+    // paper & plastic
     ["m_pet", "Plastic (PET)", "PET", 30, "−1%", 0, "paper-plastic"],
+    ["m_hdpe", "Plastic (HDPE)", "HDPE", 35, "+1%", 1, "paper-plastic"],
     ["m_np", "Newspaper", "Np", 22, "+2%", 1, "paper-plastic"],
+    ["m_mp", "Mixed paper", "MP", 16, "0%", 1, "paper-plastic"],
     ["m_cb", "Cardboard", "Cb", 14, "0%", 1, "paper-plastic"],
     ["m_gl", "Glass", "Gl", 8, "0%", 1, "paper-plastic"]
   ];

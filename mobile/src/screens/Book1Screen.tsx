@@ -13,15 +13,13 @@ import { RootStackParamList } from "../navigation/routes";
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
 
-const PICK_ORDER = ["Newspaper", "Cardboard", "Plastic (PET)", "Iron & steel", "Aluminium", "Copper", "Brass", "E-waste", "Appliances", "Glass"];
-
 export function Book1Screen() {
   const navigation = useNavigation<Nav>();
   const { data } = useApiGet<{ rates: Rate[] }>("/rates");
   const { cart, toggleMaterial, stepKg } = useApp();
 
   const rateByName = new Map((data?.rates ?? []).map((r) => [r.name, r]));
-  const pickItems = PICK_ORDER.filter((n) => rateByName.has(n));
+  const pickItems = (data?.rates ?? []).map((r) => r.name);
 
   const lines = Object.keys(cart.kgs)
     .filter((n) => rateByName.has(n))
